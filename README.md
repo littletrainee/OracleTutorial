@@ -4,7 +4,7 @@
 4. [測試連線設定與設置偵錯通道](./4.TestConnectionAndSetDebugChannel/README.md)
 5. [匯入`NorthWind`資料](./5.ImportNorthWindData/README.md)
 6. [`SQL`介紹](./6.IntroduceSQL/README.md)
-7. [查詢語句](./7.QueryStatement/REAMDE.md)
+7. [查詢語句](./7.QueryStatement/README.md)
 8. [`PL/SQL`介紹](./8.IntroducePLSQL/README.md)
 9. [程式碼風格](./9.CodeStyle/README.md)
 10. [`Hello World`](./10.HelloWorld/README.md)
