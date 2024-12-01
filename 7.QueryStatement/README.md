@@ -123,3 +123,123 @@ RENAME SUPPLIERS_BK TO WAIT_FOR_DELETE;
 &emsp;&emsp;執行變更名稱後的結果如下：
 
 ![](./resource/14.png)
+
+## 資料操作語言(`Data Manipulation Language`簡稱`DML`)
+
+### SELECT
+
+&emsp;&emsp;部分教學可能會把它定義為`資料檢索語言`(`Data Retrieval Language`簡稱`DRL`)或`資料查詢語言`(`Data Query Language`簡稱`DQL`)，主要用於從資料庫的`TABLE`獲取`資訊`或`數據`所在的`Column`，範例`SQL語句`如下：
+
+```SQL
+SELECT *
+FROM SUPPLIERS;
+```
+
+![](./resource/15.png)
+
+&emsp;&emsp;執行後的結果如下：
+
+![](./resource/16.png)
+
+&emsp;&emsp;上述的`*`表示要撈取該`TABLE`的所有`Column`，該方式通常用在大範圍確認數據的方向，倘若讀者使用的情境不需要到全部的`Column`那麼可以指定想要的`Column`，例如：
+
+![](./resource/17.png)
+
+### INSERT
+
+&emsp;&emsp;主要用於將當下要記錄的資料存放進資料庫的`TABLE`內，範例`SQL語句`如下：
+
+```SQL
+INSERT INTO EMPLOYEES (
+    EMPLOYEE_ID,
+    LASTNAME,
+    FIRSTNAME,
+    TITLE,
+    TITLE_OF_COURTESY,
+    BIRTHDATE,
+    HIREDATE,
+    ADDRESS,
+    CITY,
+    REGION,
+    POSTAL_CODE,
+    COUNTRY,
+    HOME_PHONE,
+    EXTENSION,
+    PHOTO,
+    NOTES,
+    REPORTS_TO
+) VALUES (
+    1,
+    'Luke',
+    'Lin',
+    'Oracle DBA',
+    'Sir',
+    TO_DATE('1989/09/08','YYYY/MM/DD'),
+    SYSDATE,
+    '20 State Route 78  United States',
+    'Mount Carroll',
+    'il',
+    '61053',
+    'United States',
+    '01-2345-6789',
+    '5987',
+    '',
+    '',
+    0
+  );
+```
+
+![](./resource/18.png)
+
+&emsp;&emsp;執行結果如下
+
+![](./resource/19.png)
+
+![](./resource/20.png)
+
+**&emsp;&emsp;`INSERT`不一定要一次針對全部的`Column`都填，可以部份填寫之後再使用`UPDATE`修改。除了`INSERT`之外其他的`DML`皆可使用`WHERE`**
+
+### UPDATE
+
+&emsp;&emsp;主要用於更改`TABLE`的資料，範例`SQL語句`如下：
+
+```SQL
+UPDATE EMPLOYEES
+   SET TITLE_OF_COURTESY = 'Mr.'
+ WHERE EMPLOYEE_ID = 1;
+```
+
+![](./resource/21.png)
+
+&emsp;&emsp;執行的結果如下：
+
+![](./resource/22.png)
+
+![](./resource/23.png)
+
+### DELETE
+
+&emsp;&emsp;主要用於刪除儲在`TABLE`的資料，範例``SQL語句`如下：
+
+```SQL
+DELETE FROM EMPLOYEES
+      WHERE EMPLOYEE_ID = 1;
+```
+
+![](./resource/24.png)
+
+&emsp;&emsp;執行的結果如下：
+
+![](./resource/25.png)
+
+![](./resource/26.png)
+
+## 資料控制語言(`Data Control Language`簡稱`DCL`)
+
+### GRANT
+
+&emsp;&emsp;主要用於設置當前的用戶對資料庫操控權限的`授予`，比如前面**使用者(`USER`別名`SCHEMA`)的[9. 設定比`SYSDBA`次級一點的操控權限](../2.CreateUser/README.md#69)**
+
+### REVOKE
+
+&emsp;&emsp;主要用於將當前用戶對資料庫操控權的`撤銷`，範例`SQL語句`請參考**Oracle 官方的[REVOKE statement](https://docs.oracle.com/javadb/10.8.1.2/ref/rrefsqljrevoke.html)**

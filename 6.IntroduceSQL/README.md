@@ -30,9 +30,9 @@
 
 &emsp;&emsp;原則上 SQL 的指令是包含四大類別，分別為：
 
--   資料定義語言(DDL)：針對資料庫內資料數據的物件操作，凡舉` CREATE``ALTER``DROP `，通常用在針對資料所在的`結構`，例如：`DATABASE` `TABLE`等等。
--   資料操控語言(DML)：針對資料數據進行的操作，凡舉` SELECT``INSERT``UPDATE``DELETE `。
--   資料控制語言(DCL)：針對控制資料的使用者控制權限為主，凡舉`GRANT`(`REVOKE`)可執行的操作` CONNECT``SEELCT``INSERT `等等。
+-   資料定義語言(DDL)：針對資料庫內資料數據的物件操作，凡舉`CREATE` `ALTER` `DROP`等等，通常用在針對資料所在的`結構`，例如：`DATABASE` `TABLE`等等。
+-   資料操控語言(DML)：針對資料數據進行的操作，凡舉`SELECT` `INSERT` `UPDATE` `DELETE`。
+-   資料控制語言(DCL)：針對控制資料的使用者控制權限為主，凡舉`GRANT`(`REVOKE`)可執行的操作`CONNECT` `SEELCT` `INSERT`等等。
 -   交易控制語言(TCL)：針對當前的操控是否要進行`COMMIT`或是`ROLLBACK`。
 
 下一章節會逐一介紹各類別主要的動作。
